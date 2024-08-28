@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{B6CA3879-7EB4-4D29-A03F-F5FDD428AF34}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{7676041F-4F37-4825-AD6C-4A5977D4E43F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1184,6 +1184,10 @@ where [refTable].[ProductID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="159,42"
+          Id="Package\Add new Product"
+          TopLeft="391,285" />
+        <NodeLayout
           Size="201,42"
           Id="Package\Get Database RowVersion"
           TopLeft="372,75" />
@@ -1191,6 +1195,18 @@ where [refTable].[ProductID] = ?</property>
           Size="198,42"
           Id="Package\Get Products RowVersion"
           TopLeft="378,141" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Initialize Stagingtable"
+          TopLeft="382,219" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Sync  Products Data"
+          TopLeft="386,360" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Update Last RowVersion"
+          TopLeft="387,443" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="474.75,117">
@@ -1213,10 +1229,6 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Initialize Stagingtable"
-          TopLeft="382,219" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="474.5,183">
@@ -1239,10 +1251,6 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Add new Product"
-          TopLeft="391,285" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="471.25,261">
@@ -1265,10 +1273,6 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Sync  Products Data"
-          TopLeft="386,360" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="471.75,327">
@@ -1291,10 +1295,6 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Update Last RowVersion"
-          TopLeft="387,443" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="473,402">
@@ -1338,57 +1338,21 @@ where [refTable].[ProductID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="168,42"
+          Id="Package\Add new Product\Destino de OLE DB"
+          TopLeft="245,285" />
+        <NodeLayout
           Size="161,42"
           Id="Package\Add new Product\Get Row changes"
           TopLeft="444,40" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\Add new Product\Búsqueda"
-          TopLeft="465,123" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Add new Product\Destino de OLE DB"
-          TopLeft="245,285" />
-        <EdgeLayout
-          Id="Package\Add new Product.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="527.5,165">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-198.5,120"
-              Start="0,0"
-              End="-198.5,112.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,56"
-                    Point2="0,60"
-                    Point3="-4,60" />
-                  <mssgle:LineSegment
-                    End="-194.5,60" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-194.5,60"
-                    Point2="-198.5,60"
-                    Point3="-198.5,64" />
-                  <mssgle:LineSegment
-                    End="-198.5,112.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-199.0690234375,65,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="159,42"
           Id="Package\Add new Product\Add new Product"
           TopLeft="669,285" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Add new Product\Búsqueda"
+          TopLeft="465,123" />
         <EdgeLayout
           Id="Package\Add new Product.Paths[Salida de entradas no coincidentes de búsqueda]"
           TopLeft="547,165">
@@ -1426,6 +1390,42 @@ where [refTable].[ProductID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Add new Product.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="527.5,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-198.5,120"
+              Start="0,0"
+              End="-198.5,112.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56"
+                    Point2="0,60"
+                    Point3="-4,60" />
+                  <mssgle:LineSegment
+                    End="-194.5,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-194.5,60"
+                    Point2="-198.5,60"
+                    Point3="-198.5,64" />
+                  <mssgle:LineSegment
+                    End="-198.5,112.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-199.0690234375,65,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Add new Product.Paths[Salida de origen de OLE DB]"
           TopLeft="526,82">
           <EdgeLayout.Curve>
@@ -1451,37 +1451,6 @@ where [refTable].[ProductID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Add new Product\Get Row changes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Add new Product\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimProducts]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Add new Product\Destino de OLE DB">
     <Properties>
       <Property>
@@ -1495,6 +1464,14 @@ where [refTable].[ProductID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Add new Product\Get Row changes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Add new Product\Add new Product">
     <Properties>
       <Property>
@@ -1504,6 +1481,29 @@ where [refTable].[ProductID] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add new Product\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimProducts]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
