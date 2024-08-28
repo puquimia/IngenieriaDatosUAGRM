@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/BD_ETL
+/BD_ETL/bin/Development
+/BD_ETL/obj/Development
