@@ -1,6 +1,6 @@
 BEGIN TRAN 
-	DECLARE @startdate DATE = '2016-01-01',
-			@enddate   DATE = '2019-01-01';
+	DECLARE @startdate DATE = '1996-01-01',
+			@enddate   DATE = '2000-12-31';
 	DECLARE @datelist TABLE(FullDate DATE);
 
 	IF @startdate IS NULL

@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{A5B63F07-1E9A-43A4-9896-66E4677FCF86}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{EAC07B46-9813-4F8B-AE9D-BD22E0C3CF04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2017CS;Initial Catalog=BD_DEMO;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{D5F7123F-A96E-4577-8FE9-582947E78B53}ASUS\SQLSERVER_2017CS.BD_DEMO;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2022CS;Initial Catalog=BD_DEMO;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{D5F7123F-A96E-4577-8FE9-582947E78B53}ASUS\SQLSERVER_2017CS.BD_DEMO;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2017CS;Initial Catalog=BD_VentasDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{EB1374FD-9EB4-4973-AA7D-D3333FE34D98}ASUS\SQLSERVER_2017CS.BD_VentasDW;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2022CS;Initial Catalog=BD_VentasDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{EB1374FD-9EB4-4973-AA7D-D3333FE34D98}ASUS\SQLSERVER_2017CS.BD_VentasDW;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>

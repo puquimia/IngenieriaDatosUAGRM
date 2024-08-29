@@ -8,6 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+        <ServerName>ASUS\SQLSERVER_2022CS</ServerName>
+        <PathOnServer />
         <StartObjectID>FacOrders.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />

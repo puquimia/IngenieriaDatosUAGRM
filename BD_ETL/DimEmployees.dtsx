@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="76"
-  DTS:VersionGUID="{CEA4E59C-A37C-4D80-99F7-9136B9CD4F89}">
+  DTS:VersionBuild="77"
+  DTS:VersionGUID="{0722A768-CD62-4F17-98D2-C211719FA1CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2017CS;Initial Catalog=BD_DEMO;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{7DD5A4E1-3235-4825-AD85-A964FA760BF1}ASUS\SQLSERVER_2017CS.BD_DEMO;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2022CS;Initial Catalog=BD_DEMO;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{7DD5A4E1-3235-4825-AD85-A964FA760BF1}ASUS\SQLSERVER_2017CS.BD_DEMO;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2017CS;Initial Catalog=BD_VentasDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{E993D229-EDB2-4D86-AF8D-A6AF254AE0D8}ASUS\SQLSERVER_2017CS.BD_VentasDW;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ASUS\SQLSERVER_2022CS;Initial Catalog=BD_VentasDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{E993D229-EDB2-4D86-AF8D-A6AF254AE0D8}ASUS\SQLSERVER_2017CS.BD_VentasDW;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1308,6 +1308,10 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="174,42"
+          Id="Package\Add new Employees"
+          TopLeft="473,295" />
+        <NodeLayout
           Size="201,42"
           Id="Package\Get Database RowVersion"
           TopLeft="450,69" />
@@ -1315,6 +1319,18 @@ where [refTable].[EmployeeID] = ?</property>
           Size="207,42"
           Id="Package\Get Employees RowVersion"
           TopLeft="453,146" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Initialize Stagingtable"
+          TopLeft="465,219" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Sync  Employees Data"
+          TopLeft="464,381" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Update Last RowVersion"
+          TopLeft="465,449" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="553.5,111">
@@ -1337,10 +1353,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Initialize Stagingtable"
-          TopLeft="465,219" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="555.75,188">
@@ -1363,10 +1375,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Add new Employees"
-          TopLeft="473,295" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="557.5,261">
@@ -1389,10 +1397,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="183,42"
-          Id="Package\Sync  Employees Data"
-          TopLeft="464,381" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="557.75,337">
@@ -1415,10 +1419,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Update Last RowVersion"
-          TopLeft="465,449" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="558.75,423">
@@ -1576,7 +1576,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1586,7 +1586,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
